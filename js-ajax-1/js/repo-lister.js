@@ -4,6 +4,7 @@ function updateResult(result) {
 }
 
 function populateTable(repoList) {
+  $('#repo_table tbody').empty();
   for (var i = 0; i < repoList.length; i++) {
     $('#repo_table tbody').append('<tr><td>' + repoList[i].name + '</td></tr>');
   }
@@ -16,7 +17,7 @@ $('#search_btn').click(function () {
 
   $.ajax({
     dataType: 'json',
-    url: 'https://api.github.com/users/' + userName + '/repos',
+    url: 'https://api.github.com/users/' + userName + '/repos?sort=pushed',
 
     error: function (err) {
       updateResult(userName + ' ' + err.statusText);
