@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../donation-web/.idea/donation-web.iml" filepath="$PROJECT_DIR$/../donation-web/.idea/donation-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/js-ajax-1.iml" filepath="$PROJECT_DIR$/.idea/js-ajax-1.iml" />
     </modules>
   </component>
