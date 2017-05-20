@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mathana96/javascript/issues"
   },
-  "homepage": "https://github.com/mathana96/javascript#readme"
+  "homepage": "https://github.com/mathana96/javascript#readme",
+  "dependencies": {
+    "hapi": "^16.1.1"
+  }
 }
