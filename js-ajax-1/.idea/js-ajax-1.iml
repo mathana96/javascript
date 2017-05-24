@@ -15,5 +15,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="donation-web" />
+    <orderEntry type="module" module-name="js-ajax-2" />
   </component>
 </module>
