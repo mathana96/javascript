@@ -12,11 +12,10 @@ function loadVenues(locationName, venueKeyword) {
     method: 'GET',
     json: {},
   };
-  request(requestOptions, function (err, response, body) {
+  request(requestOptions, (err, response, body) => {
     const venues = body.response.groups[0].items;
     const checkins = [];
-    for (let i = 0; i < venues.length; i++) {
-      const venue = venues[i];
+    for (let venue of venues) {
       const checkin = {
         name: venue.venue.name,
         checkins: venue.venue.stats.checkinsCount,

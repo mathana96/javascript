@@ -18,8 +18,8 @@
       <file leaf-file-name="fs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../js-ajax-2/fs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="120">
+              <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -89,7 +89,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="455" />
+    <option name="x" value="537" />
     <option name="y" value="23" />
     <option name="width" value="829" />
     <option name="height" value="729" />
@@ -265,15 +265,15 @@
       <workItem from="1488798539206" duration="109000" />
       <workItem from="1488812401227" duration="272000" />
       <workItem from="1495290743515" duration="5879000" />
-      <workItem from="1495376642108" duration="1471000" />
+      <workItem from="1495376642108" duration="1745000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12183000" />
+    <option name="totallyTimeSpent" value="12457000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="455" y="23" width="829" height="729" extended-state="0" />
+    <frame x="537" y="23" width="829" height="729" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18214716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -585,8 +585,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../js-ajax-2/fs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="120">
+          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding />
         </state>
       </provider>
