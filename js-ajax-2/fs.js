@@ -70,7 +70,35 @@ function getURLs(locationName, venueKeyword) {
   });
 }
 
+function getDetails(locationName, venueKeyword) {
+  const requestOptions = {
+    url: fsConfig.base_url + 'near=' + locationName + '&query=' + venueKeyword + fsCredentials,
+    method: 'GET',
+    json: {},
+  };
+  request(requestOptions, (err, response, body) => {
+    const venues = body.response.groups[0].items;
+    const checkins = [];
+    for (let venue of venues) {
+      const checkin = {
+        name: venue.venue.name,
+        url: venue.venue.url,
+        rating: venue.venue.rating,
+        checkins: venue.venue.stats.checkinsCount,
+        users: venue.venue.stats.usersCount,
+        tips: venue.tips[0].text,
+
+      };
+      checkins.push(checkin);
+    }
+
+    console.log(checkins);
+  });
+}
+
 const locationName = 'Waterford, IE';
+
 // loadVenues(locationName, '');
 // getRatings(locationName, '');
-getURLs(locationName, '');
+// getURLs(locationName, '');
+getDetails(locationName, '');
