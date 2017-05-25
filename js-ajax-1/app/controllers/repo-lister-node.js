@@ -14,12 +14,13 @@ function listRepos(username) {
     for (let item of reply) {
       const repo = {
         name: item.name,
-      }
+      };
       repos.push(repo);
     };
+
     console.log(requestOptions.url);
     console.log(repos);
-    
+s
   });
 }
 
