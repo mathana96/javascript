@@ -28,5 +28,27 @@ function loadVenues(locationName, venueKeyword) {
   });
 }
 
-var locationName = 'Waterford, IE';
-loadVenues(locationName, '');
+function getRatings(locationName, venueKeyword) {
+  const requestOptions = {
+    url: fsConfig.base_url + 'near=' + locationName + '&query=' + venueKeyword + fsCredentials,
+    method: 'GET',
+    json: {},
+  };
+  request(requestOptions, (err, response, body) => {
+    const venues = body.response.groups[0].items;
+    const checkins = [];
+    for (let venue of venues) {
+      const checkin = {
+        name: venue.venue.name,
+        rating: venue.venue.rating,
+      };
+      checkins.push(checkin);
+    }
+
+    console.log(checkins);
+  });
+}
+
+const locationName = 'Waterford, IE';
+// loadVenues(locationName, '');
+getRatings(locationName, '');
