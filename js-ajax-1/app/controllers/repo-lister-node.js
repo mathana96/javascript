@@ -11,13 +11,15 @@ function listRepos(username) {
   request(requestOptions, (err, response, body) => {
     const reply = body;
     const repos = [];
-    // for (let item of reply) {
-    //   const repo = {
-    //     name: item
-    //   }
-    // };
-    console.log(reply);
+    for (let item of reply) {
+      const repo = {
+        name: item.name,
+      }
+      repos.push(repo);
+    };
     console.log(requestOptions.url);
+    console.log(repos);
+    
   });
 }
 
