@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/mathana96/javascript#readme",
   "dependencies": {
+    "handlebars": "^4.0.10",
     "hapi": "^16.1.1",
-    "inert": "^4.2.0"
+    "inert": "^4.2.0",
+    "vision": "^4.1.1"
   }
 }
