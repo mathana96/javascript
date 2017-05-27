@@ -27,6 +27,8 @@ exports.login = {
 exports.authenticate = {
 
   handler: function (request, reply) {
+    this.currentUser = request.payload;
+    console.log(this.currentUser);
     reply.redirect('/home');
   },
 
@@ -35,6 +37,7 @@ exports.authenticate = {
 exports.logout = {
 
   handler: function (request, reply) {
+    this.currentUser = null;
     reply.redirect('/');
   },
 

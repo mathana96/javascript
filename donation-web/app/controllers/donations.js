@@ -14,6 +14,7 @@ exports.report = {
     reply.view('report', {
       title: 'Donations to Date',
       donations: this.donations,
+      // donor: this.currentUser.email,
     });
   },
 
@@ -23,6 +24,8 @@ exports.donate = {
 
   handler: function (request, reply) {
     const data = request.payload;
+    data.donor = this.currentUser.email;
+    console.log(data);
     this.donations.push(data);
     reply.redirect('/report');
   },
