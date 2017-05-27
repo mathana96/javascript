@@ -39,3 +39,24 @@ exports.logout = {
   },
 
 };
+
+// exports.register = {
+//
+//   handler: (request, reply) => {
+//     const data = request.payload;
+//     this.users.push(data);
+//     reply.redirect('/home');
+//   },
+//
+// };
+
+exports.register = {
+
+  handler: function (request, reply) {
+    const data = request.payload;
+    this.users.push(data);
+    console.log(this.users);
+    reply.redirect('/home');
+  },
+
+};
