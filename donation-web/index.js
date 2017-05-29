@@ -19,8 +19,6 @@ const initUsers = {
     password: 'secret',
   }
 };
-
-
 server.bind({
   // currentUser: {},
   users: initUsers,

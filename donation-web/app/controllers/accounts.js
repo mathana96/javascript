@@ -70,3 +70,25 @@ exports.register = {
   },
 
 };
+
+exports.settings = {
+  handler: function (request, reply) {
+    const userEmail = request.auth.credentials.loggedInUser;
+    const currentUserDetails = this.users[userEmail];
+    reply.view('settings', { title: 'Account Settings', user: currentUserDetails });
+  },
+};
+
+exports.updatesettings = {
+  handler: function (request, reply) {
+    const user = request.payload;
+    let currentUser = this.users[request.auth.credentials.loggedInUser];
+    const oldEmail = currentUser.email;
+
+    this.users[user.email] = user;
+
+    delete this.users[oldEmail];
+    // jscs:ignore disallowTrailingWhitespace
+    reply.redirect('/home');
+  },
+};

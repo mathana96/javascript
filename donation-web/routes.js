@@ -10,7 +10,9 @@ module.exports = [
   { method: 'POST', path: '/login', config: Accounts.authenticate },
   { method: 'POST', path: '/donate', config: Donations.donate },
   { method: 'POST', path: '/register', config: Accounts.register },
+  { method: 'POST', path: '/updatesettings', config: Accounts.updatesettings },
   { method: 'GET', path: '/logout', config: Accounts.logout },
+  { method: 'GET', path: '/settings', config: Accounts.settings },
 
   { method: 'GET', path: '/home', config: Donations.home },
   { method: 'GET', path: '/report', config: Donations.report },
