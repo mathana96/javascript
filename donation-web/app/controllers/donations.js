@@ -23,8 +23,8 @@ exports.report = {
 exports.donate = {
 
   handler: function (request, reply) {
-    const data = request.payload;
-    data.donor = this.currentUser.email;
+    let data = request.payload;
+    data.donor = this.currentUser;
     console.log(data);
     this.donations.push(data);
     reply.redirect('/report');

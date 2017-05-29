@@ -5,9 +5,24 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 server.connection({ port: process.env.PORT || 4000 });
 
+const initUsers = {
+  'bart@simpson.com':{
+    firstName: 'Bart',
+    lastName: 'Simpson',
+    email: 'bart@simpson.com',
+    password: 'secret',
+  },
+  'lisa@simpson.com':{
+    firstName: 'Lisa',
+    lastName: 'Simpson',
+    email: 'lisa@simpson.com',
+    password: 'secret',
+  }
+};
+
 server.bind({
   currentUser: {},
-  users: [],
+  users: initUsers,
   donations: [],
 });
 
