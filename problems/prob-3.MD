@@ -1,7 +1,8 @@
-*Project:* Donations
-*Problem:* Active menu tabs not working. Menu is a partial. `Error: partial not found`
+**Project:** Donations
 
-*Solution;*
+**Problem:** Active menu tabs not working. Menu is a partial. `Error: partial not found`
+
+**Solution;**
 
 * Had to restart IDE.
 * Delete `mainmenu.hbs` and recreate. 

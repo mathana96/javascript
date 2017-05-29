@@ -1,9 +1,10 @@
-*Project:* Donations
-*Problem:* `Layouts` not working
+**Project:** Donations
 
-*Solution;*
+**Problem:** `Layouts` not working
 
-*File name:* `index.js`
+**Solution;**
+
+**File name:** `index.js`
 ```javascript
   server.views({
     engines: {
