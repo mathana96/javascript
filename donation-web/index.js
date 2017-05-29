@@ -20,13 +20,15 @@ const initUsers = {
   }
 };
 
+
 server.bind({
-  currentUser: {},
+  // currentUser: {},
   users: initUsers,
   donations: [],
 });
 
-server.register([require('inert'), require('vision')], err => {
+//Loading plugins
+server.register([require('inert'), require('vision'), require('hapi-auth-cookie')], err => {
 
   if (err) {
     throw err;
@@ -43,6 +45,19 @@ server.register([require('inert'), require('vision')], err => {
     partialsPath: './app/views/partials',
     isCached: false,
   });
+
+  server.auth.strategy('standard', 'cookie', {
+    password: 'secretpasswordnotrevealedtoanyone',
+    cookie: 'donation-cookie',
+    redirectTo: '/login',
+    isSecure: false, //for testing and development, over non-secure conections
+    ttl: 24 * 60 * 60 * 1000, //1 day
+  });
+
+  server.auth.default({
+    strategy: 'standard',
+  });
+
   server.route(require('./routes'));
 
   server.start((err) => {

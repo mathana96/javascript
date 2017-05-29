@@ -1,7 +1,7 @@
 'use strict';
 
 exports.main = {
-
+  auth: false,
   handler: function (request, reply) {
     reply.view('main', { title: 'Welcome to Donations' });
   },
@@ -9,7 +9,7 @@ exports.main = {
 };
 
 exports.signup = {
-
+  auth: false,
   handler: function (request, reply) {
     reply.view('signup', { title: 'Sign up for Donations' });
   },
@@ -17,7 +17,7 @@ exports.signup = {
 };
 
 exports.login = {
-
+  auth: false,
   handler: function (request, reply) {
     reply.view('login', { title: 'Login to Donations' });
   },
@@ -25,10 +25,14 @@ exports.login = {
 };
 
 exports.authenticate = {
-
+  auth: false,
   handler: function (request, reply) {
     const user = request.payload;
     if ((user.email in this.users) && (user.password === this.users[user.email].password)) {
+      request.cookieAuth.set({
+        loggedIn: true,
+        loggedInUser: user.email,
+      });
       reply.redirect('/home');
     } else {
       reply.redirect('/signup');
@@ -38,9 +42,9 @@ exports.authenticate = {
 };
 
 exports.logout = {
-
+  auth: false,
   handler: function (request, reply) {
-    this.currentUser = null;
+    request.cookieAuth.clear();
     reply.redirect('/');
   },
 
@@ -57,7 +61,7 @@ exports.logout = {
 // };
 
 exports.register = {
-
+  auth: false,
   handler: function (request, reply) {
     const user = request.payload;
     this.users[user.email] = user; //Insert new User objects where the user's email is the 'key'
