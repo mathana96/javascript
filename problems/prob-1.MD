@@ -1,9 +1,9 @@
-Project: Donations
-Problem: `Layouts` not working
+*Project:* Donations
+*Problem:* `Layouts` not working
 
-Solution;
+*Solution;*
 
-File name: `index.js`
+*File name:* `index.js`
 ```javascript
   server.views({
     engines: {

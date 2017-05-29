@@ -1,9 +1,9 @@
-Project: Donations
-Problem: `TypeError: Uncaught error: Cannot read property 'push' of undefined` when using `arrow function` for `handler`
+*Project:* Donations
+*Problem:* `TypeError: Uncaught error: Cannot read property 'push' of undefined` when using `arrow function` for `handler`
 
-Solution (I think. Source: https://rainsoft.io/when-not-to-use-arrow-functions-in-javascript/);
+*Solution:* (I think. Source: https://rainsoft.io/when-not-to-use-arrow-functions-in-javascript/);
 
-File name: `accounts.js`
+*File name:* `accounts.js`
 Below throws error;
 ```javascript
 exports.register = {
