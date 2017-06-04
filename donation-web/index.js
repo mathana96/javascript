@@ -19,11 +19,11 @@ const initUsers = {
     password: 'secret',
   }
 };
-server.bind({
-  // currentUser: {},
-  users: initUsers,
-  donations: [],
-});
+// server.bind({
+//   // currentUser: {},
+//   users: initUsers,
+//   donations: [],
+// });
 
 //Loading plugins
 server.register([require('inert'), require('vision'), require('hapi-auth-cookie')], err => {
