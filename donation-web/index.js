@@ -25,6 +25,8 @@ const initUsers = {
 //   donations: [],
 // });
 
+require('./app/models/db');
+
 //Loading plugins
 server.register([require('inert'), require('vision'), require('hapi-auth-cookie')], err => {
 
