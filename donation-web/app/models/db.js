@@ -1,6 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 
 let dbURI = 'mongodb://localhost/donation';
 if (process.env.NODE_ENV === 'production') {
@@ -9,11 +10,11 @@ if (process.env.NODE_ENV === 'production') {
 
 mongoose.connect(dbURI);
 
-mongoose.connection.on('connected', function() {
+mongoose.connection.on('connected', function () {
   console.log('Mongoose connected to ' + dbURI);
 });
 
-mongoose.connection.on('error', function() {
+mongoose.connection.on('error', function () {
   console.log('Mongoose connection error: ' + err);
 });
 
