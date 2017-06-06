@@ -91,21 +91,26 @@ exports.register = {
 exports.settings = {
   handler: function (request, reply) {
     const userEmail = request.auth.credentials.loggedInUser;
-    const currentUserDetails = this.users[userEmail];
-    reply.view('settings', { title: 'Account Settings', user: currentUserDetails });
+    User.findOne({ email: userEmail }).then(foundUser => {
+      reply.view('settings', { title: 'Account Settings', user: foundUser });
+    }).catch(err => {
+      reply.redirect('/');
+    });
   },
 };
 
 exports.updatesettings = {
   handler: function (request, reply) {
-    const user = request.payload;
-    let currentUser = this.users[request.auth.credentials.loggedInUser];
-    const oldEmail = currentUser.email;
-
-    this.users[user.email] = user;
-
-    delete this.users[oldEmail];
-    // jscs:ignore disallowTrailingWhitespace
-    reply.redirect('/home');
+    const editedUser = request.payload;
+    const loggedInUserEmail = request.auth.credentials.loggedInUser;
+    User.findOne({ email: loggedInUserEmail }).then(user => {
+      user.firstName = editedUser.firstName;
+      user.lastName = editedUser.lastName;
+      user.email = editedUser.email;
+      user.password = editedUser.password;
+      return user.save(); // return the saved user to use it for render
+    }).then(user => {
+      reply.view('settings', { title: 'Edit Account Settings', user: user });
+    });
   },
 };
