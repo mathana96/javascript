@@ -138,6 +138,7 @@ exports.settings = {
 };
 
 exports.updatesettings = {
+
   validate: {
 
     payload: {
@@ -151,10 +152,15 @@ exports.updatesettings = {
       abortEarly: false,
     },
     failAction: function (request, reply, source, error) {
-      reply.view('signup', {
-        title: 'Sign up error',
-        errors: error.data.details,
-      }).code(400);
+      const loggedInUserEmail = request.auth.credentials.loggedInUser;
+      User.findOne({ email: loggedInUserEmail }).then(user => {
+        reply.view('settings', {
+          title: 'Update error',
+          user: user,
+          errors: error.data.details,
+        }).code(400);
+      });
+
     },
   },
 
