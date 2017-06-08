@@ -29,6 +29,24 @@ exports.login = {
 
 exports.authenticate = {
   auth: false,
+
+  validate: {
+
+    payload: {
+      email: Joi.string().email().required(),
+      password: Joi.string().required(),
+    },
+
+    options: {
+      abortEarly: false,
+    },
+    failAction: function (request, reply, source, error) {
+      reply.view('login', {
+        title: 'Log in error',
+        errors: error.data.details,
+      }).code(400);
+    },
+  },
   handler: function (request, reply) {
     const user = request.payload;
     User.findOne({ email: user.email }).then(foundUser => {
@@ -120,17 +138,37 @@ exports.settings = {
 };
 
 exports.updatesettings = {
-  handler: function (request, reply) {
-    const editedUser = request.payload;
-    const loggedInUserEmail = request.auth.credentials.loggedInUser;
-    User.findOne({ email: loggedInUserEmail }).then(user => {
-      user.firstName = editedUser.firstName;
-      user.lastName = editedUser.lastName;
-      user.email = editedUser.email;
-      user.password = editedUser.password;
-      return user.save(); // return the saved user to use it for render
-    }).then(user => {
-      reply.view('settings', { title: 'Edit Account Settings', user: user });
-    });
+  validate: {
+
+    payload: {
+      firstName: Joi.string().required(),
+      lastName: Joi.string().required(),
+      email: Joi.string().email().required(),
+      password: Joi.string().required(),
+    },
+
+    options: {
+      abortEarly: false,
+    },
+    failAction: function (request, reply, source, error) {
+      reply.view('signup', {
+        title: 'Sign up error',
+        errors: error.data.details,
+      }).code(400);
+    },
   },
+
+  handler: function (request, reply) {
+      const editedUser = request.payload;
+      const loggedInUserEmail = request.auth.credentials.loggedInUser;
+      User.findOne({ email: loggedInUserEmail }).then(user => {
+        user.firstName = editedUser.firstName;
+        user.lastName = editedUser.lastName;
+        user.email = editedUser.email;
+        user.password = editedUser.password;
+        return user.save(); // return the saved user to use it for render
+      }).then(user => {
+        reply.view('settings', { title: 'Edit Account Settings', user: user });
+      });
+    },
 };
