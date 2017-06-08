@@ -21,6 +21,7 @@
     "hapi": "^16.1.1",
     "hapi-auth-cookie": "^7.0.0",
     "inert": "^4.2.0",
+    "joi": "^10.5.2",
     "mongoose": "^4.10.4",
     "vision": "^4.1.1"
   }
