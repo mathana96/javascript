@@ -18,18 +18,28 @@
       <file leaf-file-name="snip-1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snip-1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="snip-2.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="snip-2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snip-2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+            <state relative-caret-position="75">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="snip-3.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/snip-3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -42,6 +52,7 @@
       <list>
         <option value="$PROJECT_DIR$/snip-1.js" />
         <option value="$PROJECT_DIR$/snip-2.js" />
+        <option value="$PROJECT_DIR$/snip-3.js" />
       </list>
     </option>
   </component>
@@ -102,11 +113,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
-  <component name="RunManager" selected="Node.js.snip-2.js">
+  <component name="RunManager" selected="Node.js.snip-3.js">
     <configuration default="false" name="snip-1.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="snip-1.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="false" name="snip-2.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="snip-2.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="false" name="snip-3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="snip-3.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -159,14 +173,16 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Node.js.snip-1.js" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.snip-2.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.snip-3.js" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.snip-2.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.snip-1.js" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.snip-3.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.snip-2.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.snip-1.js" />
       </list>
     </recent_temporary>
   </component>
@@ -180,12 +196,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1502076442421</updated>
-      <workItem from="1502076443938" duration="596000" />
+      <workItem from="1502076443938" duration="1312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="596000" />
+    <option name="totallyTimeSpent" value="1312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="514" y="23" width="766" height="729" extended-state="0" />
@@ -221,18 +237,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/snip-1.js">
+    <entry file="file://$PROJECT_DIR$/snip-2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snip-2.js">
+    <entry file="file://$PROJECT_DIR$/snip-1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snip-3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
           <folding />
         </state>
       </provider>
